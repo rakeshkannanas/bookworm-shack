@@ -49,7 +49,7 @@ class _FavoriteScreenState extends State<FavoriteScreen> {
   @override
   Widget build(BuildContext context) {
     final bookListData = Provider.of<BooksApiProvider>(context, listen: true);
-
+    var mediaQuery = MediaQuery.of(context);
     return Scaffold(
       body: SafeArea(
         child: Stack(
@@ -222,7 +222,7 @@ class _FavoriteScreenState extends State<FavoriteScreen> {
                                                   children: [
                                                     Container(
                                                       width:
-                                                          MediaQuery.of(context)
+                                                      mediaQuery
                                                                   .size
                                                                   .width -
                                                               180,
@@ -243,7 +243,7 @@ class _FavoriteScreenState extends State<FavoriteScreen> {
                                                     ),
                                                     Container(
                                                       width:
-                                                          MediaQuery.of(context)
+                                                          mediaQuery
                                                                   .size
                                                                   .width -
                                                               180,

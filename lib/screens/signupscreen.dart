@@ -85,6 +85,7 @@ class _SignupScreenState extends State<SignupScreen> {
 
   @override
   Widget build(BuildContext context) {
+    var mediaQuery = MediaQuery.of(context);
     return Scaffold(
         body: Form(
       key: _formKey,
@@ -106,7 +107,7 @@ class _SignupScreenState extends State<SignupScreen> {
                   ClipPath(
                     clipper: WaveClipperOne(reverse: true),
                     child: Container(
-                      height: MediaQuery.of(context).size.height / 2,
+                      height: mediaQuery.size.height / 2,
                       color: Colors.white,
                     ),
                   ),
@@ -200,7 +201,7 @@ class _SignupScreenState extends State<SignupScreen> {
                           style: ElevatedButton.styleFrom(
                               primary: Colors.blue,
                               minimumSize: Size(
-                                  MediaQuery.of(context).size.width - 40,
+                                  mediaQuery.size.width - 40,
                                   40) // put the width and height you want
                               ),
                         ),

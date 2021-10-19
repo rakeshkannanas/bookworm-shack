@@ -29,6 +29,7 @@ class _AuthScreenState extends State<AuthScreen> {
 
   @override
   Widget build(BuildContext context) {
+    var mediaQuery = MediaQuery.of(context);
     return Scaffold(
       body: Stack(
         children: [
@@ -42,10 +43,10 @@ class _AuthScreenState extends State<AuthScreen> {
           Align(
             alignment: Alignment.bottomCenter,
             child: Container(
-              height: (MediaQuery.of(context).size.height -
-                      MediaQuery.of(context).padding.top) /
+              height: (mediaQuery.size.height -
+                  mediaQuery.padding.top) /
                   2,
-              width: MediaQuery.of(context).size.width,
+              width: mediaQuery.size.width,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.only(
                     topRight: Radius.circular(30),
@@ -108,7 +109,7 @@ class _AuthScreenState extends State<AuthScreen> {
                           style: ElevatedButton.styleFrom(
                               primary: Colors.white,
                               minimumSize: Size(
-                                  MediaQuery.of(context).size.width - 40,
+                                  mediaQuery.size.width - 40,
                                   40) // put the width and height you want
                               ),
                         ),
@@ -133,7 +134,7 @@ class _AuthScreenState extends State<AuthScreen> {
                           style: ElevatedButton.styleFrom(
                               primary: Colors.blue,
                               minimumSize: Size(
-                                  MediaQuery.of(context).size.width - 40,
+                                  mediaQuery.size.width - 40,
                                   40) // put the width and height you want
                               ),
                         ),
@@ -212,7 +213,7 @@ class _AuthScreenState extends State<AuthScreen> {
                           style: ElevatedButton.styleFrom(
                               primary: Colors.red,
                               minimumSize: Size(
-                                  MediaQuery.of(context).size.width - 40,
+                                  mediaQuery.size.width - 40,
                                   40) // put the width and height you want
                               ),
                         ),

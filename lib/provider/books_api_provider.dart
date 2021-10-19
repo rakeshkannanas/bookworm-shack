@@ -98,29 +98,7 @@ class BooksApiProvider extends ChangeNotifier {
 
   Future<void> checkFav(String id) async {
     final prefs = await SharedPreferences.getInstance();
-    // bool flag  = false;
-    // var _firebaseRef = FirebaseFirestore.instance.collection('favorites').snapshots();
-    //
-    //  _firebaseRef.listen((data) {
-    //   if (data.docs.length == 0) Props.FAV = 'false';
-    //   data.docs.forEach((document) {
-    //     if (prefs.getString('uid') == document['uid']) {
-    //       if (document['bookId'] == id) {
-    //         flag = true;
-    //         print(flag);
-    //         Props.FAV = 'true';
-    //       } else {
-    //         flag = false;
-    //         print(flag);
-    //         Props.FAV = 'false';
-    //       }
-    //     } else {
-    //       flag = false;
-    //       print(flag);
-    //       Props.FAV = 'false';
-    //     }
-    //   });
-    // });
+
 
     FirebaseFirestore.instance.collection("favorites").get().then((data) {
       Props.FAV='false';

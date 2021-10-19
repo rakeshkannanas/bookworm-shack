@@ -55,6 +55,7 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
+    var mediaQuery = MediaQuery.of(context);
     final bookListData = Provider.of<BooksApiProvider>(context, listen: true);
     return Scaffold(
       floatingActionButton: FloatingActionButton(
@@ -283,7 +284,7 @@ class _HomeState extends State<Home> {
                                                 MainAxisAlignment.center,
                                             children: [
                                               Container(
-                                                width: MediaQuery.of(context)
+                                                width: mediaQuery
                                                         .size
                                                         .width -
                                                     180,
@@ -302,7 +303,7 @@ class _HomeState extends State<Home> {
                                                 height: 10,
                                               ),
                                               Container(
-                                                width: MediaQuery.of(context)
+                                                width: mediaQuery
                                                         .size
                                                         .width -
                                                     180,
